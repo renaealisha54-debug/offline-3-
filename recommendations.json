@@ -1,0 +1,12 @@
+{
+  "Kotlin": {
+    "snippet": "implementation 'com.squareup.retrofit2:retrofit:2.9.0'",
+    "placement": "build.gradle (dependencies block)",
+    "color": "#FF00FF"
+  },
+  "Python": {
+    "snippet": "pip install requests",
+    "placement": "requirements.txt",
+    "color": "#00FF00"
+  }
+}
