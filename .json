@@ -1,0 +1,5 @@
+// Recommended Message Schema
+{
+  "type": "SUCCESS" | "ERROR" | "LOG",
+  "payload": "The result or error message string"
+}
