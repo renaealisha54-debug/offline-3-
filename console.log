@@ -1,0 +1,9 @@
+// Inside your RUN action
+const localConsole = {
+    log: (...args) => TerminalEngine.log(args.join(' ')),
+    error: (...args) => TerminalEngine.log(args.join(' '), 'error')
+};
+
+// Create the function, passing the localConsole as 'console'
+const executableFunction = new Function('console', userCode);
+executableFunction(localConsole);
