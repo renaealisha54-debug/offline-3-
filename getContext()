@@ -1,0 +1,2 @@
+// Correct in a Fragment
+dbHelper = new ProjectDatabaseHelper(requireContext()); 
