@@ -1,0 +1,12 @@
+dependencies {
+    // UI Refinement: Less bulky layout management
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.9.0'
+
+    // Syntax Highlighting & Performance
+    implementation 'io.github.rosemoe.sora-editor:editor:0.21.1' // High-performance code editor view
+
+    // Local Data & Structure
+    implementation 'androidx.sqlite:sqlite:2.3.1'
+    implementation 'com.google.gson:gson:2.10.1' // For recommendations.json parsing
+}
