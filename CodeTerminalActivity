@@ -1,0 +1,33 @@
+// Logic inside CodeTerminalActivity.java (The Conductor)
+
+public class CodeTerminalActivity extends AppCompatActivity {
+    // Instantiate your components
+    private CodeAnalyzerService analyzer = new CodeAnalyzerService();
+    private ProjectDatabaseHelper dbHelper;
+    private FileExporter exporter = new FileExporter();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        dbHelper = new ProjectDatabaseHelper(this); // Initialize database
+        // ... setup UI ...
+    }
+
+    // Triggered when text changes
+    private void onCodeChanged(String text) {
+        // 1. Validate Syntax
+        if (analyzer.isSyntaxValid(text)) {
+            // Proceed to auto-format
+            String cleanCode = analyzer.autoFormat(text);
+            // 2. Highlight/Update UI
+        } else {
+            // Trigger red error highlight
+        }
+    }
+
+    // Triggered by Save Button
+    private void handleSave(String title, String notes) {
+        String currentCode = terminalInput.getText().toString();
+        dbHelper.saveProject(title, "Kotlin", notes, currentCode); // Persist
+    }
+}
