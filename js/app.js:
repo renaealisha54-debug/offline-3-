@@ -1,0 +1,23 @@
+// Add an event listener to your textarea/editor
+editor.addEventListener('input', (event) => {
+    const code = event.target.value;
+    
+    // 1. Check syntax (Basic logic)
+    if (!isSyntaxValid(code)) {
+        // 2. Highlight error
+        applyErrorHighlight();
+    } else {
+        // Remove highlight if valid
+        editor.style.backgroundColor = 'white';
+    }
+});
+
+function applyErrorHighlight() {
+    // Web implementation of "Red Background"
+    editor.style.backgroundColor = '#ffcccc'; // Light red
+}
+
+function isSyntaxValid(code) {
+    // Add your validation logic here
+    return code.length > 0; // Example placeholder
+}
