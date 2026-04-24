@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off - Offline Code Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <header>
+        <div id="fileName">Untitled File</div>
+        <nav>
+            <button id="openBtn">Open</button>
+            <button id="saveBtn">Save</button>
+            <button id="installBtn">Install</button>
+        </nav>
+    </header>
+
+    <main>
+        <textarea id="editor" placeholder="Start typing your code here..."></textarea>
+    </main>
+
+    <footer id="statusBar">
+        Ready
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
